@@ -35,7 +35,7 @@ class AddLayoutHandleTo404Page implements DataPatchInterface
         $sql = 'UPDATE `cms_page` set `layout_update_selected` = "Game" where `identifier` = "no-route"';
         $this->resourceConnection->getConnection()->query($sql);
 
-        $sql = 'UPDATE `cms_page` set `content` = null';
+        $sql = 'UPDATE `cms_page` set `content` = ""';
         $this->resourceConnection->getConnection()->query($sql);
 
         return $this;
